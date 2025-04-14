@@ -12,7 +12,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* FIX: Ensure padding and borders don't make elements overflow */
     * {
       box-sizing: border-box;
     }
@@ -48,23 +47,12 @@
       text-align: center;
     }
 
-    .logo {
-      width: 90px;
-      height: 90px;
-      background: white;
-      border-radius: 50%;
-      margin: 0 auto 20px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
     .logo img {
-      width: 100%;
+      width: 250px; /* make logo big */
       height: auto;
+      margin-bottom: 20px;
       object-fit: contain;
+      filter: brightness(0) invert(1); /* make logo white */
     }
 
     h1 {
@@ -119,7 +107,7 @@
 
   <div class="container">
     <div class="logo">
-      <!-- Your real AXIS logo -->
+      <!-- Direct logo without any circle background -->
       <img src="AXIS Logo.jpg" alt="Axis Migration Lawyers Logo">
     </div>
 
