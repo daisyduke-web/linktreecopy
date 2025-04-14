@@ -11,96 +11,125 @@
   <!-- Load Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-family: 'Lora', serif;
-      background: linear-gradient(-45deg, #0d1548, #1a237e, #3949ab, #0d1548);
-      background-size: 400% 400%;
-      animation: gradientBG 20s ease infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lora', serif;
+    background: linear-gradient(-45deg, #0d1548, #1a237e, #3949ab, #0d1548);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
+  .container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+
+  .logo img {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+  .link-button {
+    position: relative;
+    background: white;
+    color: #1a237e;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+    width: 100%;
+    min-height: 55px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .link-button i {
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    color: #1a237e;
+    transition: color 0.4s ease;
+  }
+
+  .link-button:hover {
+    background: #0d1548;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26, 35, 126, 0.6), 0 0 20px rgba(26, 35, 126, 0.4);
+  }
+
+  .link-button:hover i {
+    color: white;
+  }
+
+  /* === MOBILE FRIENDLY FIX === */
+  @media (max-width: 480px) {
     .container {
-      width: 90%;
-      max-width: 400px;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 30px 20px;
-      border-radius: 16px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      text-align: center;
+      padding: 20px 15px;
+      max-width: 90%;
     }
 
     .logo img {
-      width: 250px; /* make logo big */
-      height: auto;
-      margin-bottom: 20px;
-      object-fit: contain;
-      filter: brightness(0) invert(1); /* invert to white */
+      width: 160px; /* Smaller logo for phones */
     }
 
     h1 {
-      margin-bottom: 30px;
-      font-size: 22px;
-      color: #ffffff;
+      font-size: 20px;
     }
 
     .link-button {
-      position: relative;
-      background: white;
-      color: #1a237e;
-      text-decoration: none;
-      padding: 12px 20px;
-      margin: 10px 0;
-      width: 100%;
-      min-height: 55px;
-      border-radius: 10px;
-      font-size: 16px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.4s ease;
-      overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+      padding: 10px 15px;
     }
 
     .link-button i {
-      position: absolute;
-      left: 20px;
-      font-size: 20px;
-      color: #1a237e;
-      transition: color 0.4s ease;
+      font-size: 18px;
+      left: 15px;
     }
+  }
+</style>
 
-    .link-button:hover {
-      background: #0d1548;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(26, 35, 126, 0.6), 0 0 20px rgba(26, 35, 126, 0.4);
-    }
-
-    .link-button:hover i {
-      color: white;
-    }
-  </style>
 </head>
 
 <body>
